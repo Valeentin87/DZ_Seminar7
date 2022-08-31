@@ -1,6 +1,8 @@
 ﻿// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 
-int[] Matrix = IsNumbers();
+int[] Matrix = IsNumbers();//введенные с помощью метода данные будем вкладывать в одномерный массив из двух элементов
+double[,] DoubleArray2D = FillArray2D(Matrix[0], Matrix[1]);
+PrintArray2D(DoubleArray2D);
 int[] IsNumbers()
 {
     int[] array = new int[2];
@@ -20,9 +22,6 @@ int[] IsNumbers()
     Console.WriteLine("корректный ввод");
     return array;
 }
-
-double[,] DoubleArray2D = FillArray2D(Matrix[0], Matrix[1]);
-PrintArray2D(DoubleArray2D);
 
 double[,] FillArray2D(int rows, int columns)
 {
